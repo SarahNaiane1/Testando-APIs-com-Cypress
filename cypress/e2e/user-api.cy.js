@@ -1,7 +1,7 @@
 context("Cypress APIs", () => {
   const uniqueEmail = `user_${Date.now()}@example.com`;
   let newUser;
-  let userId; // Declaração de userId
+  let userId; 
 
   before(() => {
     // Limpa a coleção de usuários antes dos testes
@@ -16,7 +16,6 @@ context("Cypress APIs", () => {
   });
 
   beforeEach(() => {
-    // Define o novo usuário antes de cada teste
     newUser = {
       name: "John Doe",
       email: uniqueEmail,
@@ -38,7 +37,7 @@ context("Cypress APIs", () => {
         new Date(response.body.dateOfBirth).toISOString().split("T")[0]
       ).to.eql(newUser.dateOfBirth);
       expect(response.body.address).to.eql(newUser.address);
-      userId = response.body._id; // Armazena o userId para uso posterior
+      userId = response.body._id; 
     });
   });
 
@@ -47,7 +46,7 @@ context("Cypress APIs", () => {
       url: "http://localhost:5000/api/user",
       method: "POST",
       body: newUser,
-      failOnStatusCode: false, // Permite que o teste continue mesmo com erro
+      failOnStatusCode: false, 
     }).then((response) => {
       expect(response.status).to.eql(400);
       expect(response.body.error).to.eql("Email already in use");
@@ -107,7 +106,6 @@ context("Cypress APIs", () => {
       expect(response.body.message).to.eql("User removed successfully");
     });
 
-    // Verifica se o usuário foi realmente removido
     cy.request({
       url: `http://localhost:5000/api/user/${userId}`,
       method: "GET",
