@@ -108,7 +108,7 @@ Banco de Dados:  MongoDB como banco de dados.
 
 
 ## Autores
-- [@SARAHNAIANE](https://www.github.com/sarahnaiane1
-- )
+- https://www.github.com/sarahnaiane1
+  
 
   
