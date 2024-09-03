@@ -1,0 +1,32 @@
+{
+  "name": "usuarios-api",
+  "version": "1.0.0",
+  "description": "API RESTful para cadastro e gerenciamento de usuários, utilizando Node.js e MongoDB.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "prettify": "prettier --write \"src/**/*.js\""
+  },
+  "keywords": [
+    "API",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Mongoose",
+    "RESTful"
+  ],
+  "author": "Sarah Naiane",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^3.0.0"
+  }
+}
