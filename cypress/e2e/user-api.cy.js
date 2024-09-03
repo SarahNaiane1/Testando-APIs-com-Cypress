@@ -1,7 +1,6 @@
 context("Cypress APIs", () => {
   const uniqueEmail = `user_${Date.now()}@example.com`;
-  let newUser;
-  let userId; 
+  let newUser;  let userId; 
 
   before(() => {
     // Limpa a coleção de usuários antes dos testes
